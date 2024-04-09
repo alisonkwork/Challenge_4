@@ -7,14 +7,14 @@
 }
 
 header {
-    margin: 0;
+    margin: 0 0 0 10px;
 }
 
 h1 {
     font-family: var(--header-text);
     color: #000;
     letter-spacing: -3px;
-    font-size: 20pt;
+    font-size: 24pt;
     font-weight: 700;
     display: inline;
 }
@@ -33,6 +33,7 @@ nav {
 
 a {
     font-family: var(--secondary-text);
+    font-weight: 500;
     text-decoration: none;
     font-size: 11pt;
     color: #272727;
@@ -53,10 +54,12 @@ img {
     display: inline;
     float: left;
     padding-right: 20px;
+    width: 150px;
+    height: 150px;
 }
 
 .profile {
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
     padding-top: 60px;
 }
@@ -64,7 +67,7 @@ img {
 .profile h2 {
     font-family: var(--header-text);
     font-weight: 400;
-    font-size: 20pt;
+    font-size: 28pt;
     color: #444444;
     margin: 15px 0 0 0;
 }
@@ -72,12 +75,12 @@ img {
 .profile h3 {
     font-family: var(--secondary-text);
     font-weight: 300;
-    font-size: 12pt;
+    font-size: 14pt;
     color: #444444;
     margin: 0 0 10px 0;
 }
 
-.profile h4 {
+.interactions {
     font-family: var(--secondary-text);
     font-size: 10pt;
     color: #9B9B9B;
@@ -86,60 +89,71 @@ img {
     font-weight: 400;
 }
 
+.interactions:hover {
+    color: #444444;
+    text-decoration: none;
+}
+
 .buttons {
-    width: 800px;
+    width: 900px;
     margin: 0 auto;
     padding-top: 60px;
 }
 
 .button1 {
     font-family: var(--secondary-text);
-    font-size: 10pt;
+    font-size: 11pt;
     color: #444444;
     border-radius: 20px;
     border: 1px solid #Dad4da;
     background-color: #fff;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .button1:hover {
-    background-color: #F8F7F8;
     border: 1px solid var(--accent-color);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .03);
+    transition-duration: 0.3s;
 }
 
 .button2 {
     font-family: var(--secondary-text);
-    font-size: 10pt;
+    font-size: 11pt;
     background-color: var(--accent-color);
     color: #fff;
     border-radius: 20px;
     border: 1px solid var(--accent-color);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 32px;
+    padding-right: 32px;
     margin-left: 20px;
 }
 
 .button2:hover {
     background-color: #74216C;
+    transition-duration: 0.3s;
 }
 
 main {
     display: grid;
-    gap: 20px;
-    width: 800px;
+    gap: 50px;
+    width: 900px;
     margin: 0 auto;
     padding: 30px;
-    grid-template-columns: 500px 250px;
+    grid-template-columns: 580px 270px;
 }
 
 .posts {
     grid-column: 1;
     grid-row: 1;
+}
+
+.posts .a {
+    font-size: 8pt;
 }
 
 .projects {
@@ -151,34 +165,89 @@ main {
     grid-column: 2;
     grid-row: 1;
     background-color: rgba(248, 247, 248, .50);
-    padding: 10px 40px 10px 20px;
+    padding: 10px 40px 20px 20px;
 }
 
 .experience {
     grid-column: 2;
     grid-row: 2;
     background-color: rgba(248, 247, 248, .50);
-    padding: 10px 40px 10px 20px;
+    padding: 10px 40px 20px 20px;
 }
 
 h2 {
     font-family: var(--header-text);
     font-weight: 400;
-    font-size: 18pt;
+    font-size: 20pt;
     color: #444444;
-    margin: 15px 0 0 0;
+    margin: 15px 0 15px 0;
 }
 
 h3 {
     font-family: var(--secondary-text);
     color: #444444;
-    font-size: 14pt;
+    font-size: 11pt;
+    font-weight: 600;
+    margin: 10px 0 10px 0;
 }
 
 p {
     font-family: var(--secondary-text);
-    color: #3b3b3b;
+    color: #606060;
     font-size: 10pt;
-    line-height: 14pt;
+    line-height: 15pt;
+    margin: 2px 0 2px 0;
 }
 
+.date {
+    font-style: italic;
+}
+
+.postCard {
+    border-radius: 15px;
+    border: 1px solid #e6e4e6;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.postCard:hover {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .09);
+    transition-duration: 0.3s;
+}
+
+.postCard h3 {
+    font-family: var(--header-text);
+    color: #444444;
+    font-size: 10pt;
+    font-weight: 600;
+    margin: 0px 0 10px 0;
+}
+
+.postCard p {
+    font-family: var(--secondary-text);
+    color: #3b3b3b;
+    font-size: 10pt;
+    margin: 2px 0 2px 0;
+}
+
+.postCard img {
+    float: left;
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.projects img {
+    width: 260px;
+    height: 260px;
+    display: inline;
+    border: 1px solid #e6e4e6;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.projects img:hover {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .2);
+    transition-duration: 0.3s;
+}
